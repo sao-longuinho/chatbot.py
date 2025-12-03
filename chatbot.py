@@ -282,7 +282,7 @@ dataset = [ ("O que são os indígenas?",
 ]
 
 def preprocess(text):
-    return text.lower().replace("?", "").replace(".", "").replace("‘", "").replace("’", "").replace("'", "").split()
+    return text.lower().replace("?", "").replace(".", "").replace("‘", "").replace("’", "").replace("'", "").replace("´", "").replace("^", "").replace("~", "").replace(",", "").split()
 
 vocabulary = list(set(word for question, _ in dataset for word in preprocess(question)))
 
