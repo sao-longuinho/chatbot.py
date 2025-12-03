@@ -290,10 +290,10 @@ def preprocess_c(palavras):
     resultado = []  
     for palavra in palavras:  
         melhor = palavra 
-        menor = 4
+        menor = 1
         for word in vocabulary:  
             distancia = character_distance(palavra, word) 
-            if distancia < menor and distancia < 0.01: 
+            if distancia < menor and distancia < 0.04: 
                 menor = distancia  
                 melhor = word 
         resultado.append(melhor) 
